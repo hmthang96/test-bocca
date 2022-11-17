@@ -1,0 +1,83 @@
+{% paginate collection.products by {{section.settings.products_per_page}} %}
+<div class="collection-products container">
+    <div class="sort-collection">
+        <div class="filter-btn">
+            <button class="btn-box"><i class="fas fa-sliders-h"></i> Filter results</button>
+        </div>
+        <div class="filter-optional">
+            <div class="total-products">
+                <p>{{paginate.items}} items </p>
+            </div>
+            <select name="sorting" class="sort-by" id="sort-by">
+                {% for option in collection.sort_options %}
+                    <option value="{{ option.value }}" 
+                    {% if option.value == sort_by %}selected="selected"{% endif %}>
+                        {{ option.name }}
+                    </option>
+                {% endfor %}
+            </select>
+        </div>
+ 
+    </div>
+
+    
+
+    <div class="products-result-collection">
+            {% for product in collection.products %}
+            {% render 'snippets-product-sales' product:product %}
+            {% endfor %}
+    </div>
+    {{- paginate | default_pagination -}}
+
+
+    <div class="filter-results">
+        <h4 class="title">Filter Results</h4>
+        <div class="cagetory-menu">
+            Cagetory
+            <div class="sort-cagetories">
+                {% for collection in collections %}
+                    <a href="{{collection.url }}">{{collection.title}}</a>   
+                {% endfor %}
+            </div>
+            <select class="sort-by">
+                {% for product_vendor in collection.all_vendors %}
+                    <option value="{{ product_vendor }}" 
+                    {% if product_vendor == sort_by %}selected="selected"{% endif %}>
+                        {{ product_vendor }}
+                    </option>
+                {% endfor %}
+            </select>
+
+                
+
+            <div class="sort-price">
+                <label for="pmin">Min price</label>
+                <input type="text">
+                <br> 
+                <label for="pmax">Max price</label>
+                <input type="text">
+            </div>
+        </div>
+    </div>
+
+
+</div>
+{% endpaginate %}
+
+{% schema %}
+{
+   "name": "Product settings",
+  "settings": [
+    {
+        "type": "range",
+        "id": "products_per_page",
+        "label": "Products per page",
+        "min": 8,
+        "max": 24,
+        "step": 2,
+        "unit": "s",
+    "default": 20
+    }
+  ]
+}
+{% endschema %}

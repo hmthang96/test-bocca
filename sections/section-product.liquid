@@ -1,0 +1,35 @@
+{% render 'snippets-slide', product : product %}
+
+
+<div class="product-infomation">
+    <div class="product-name">
+        {{product.title}}
+    </div>
+    <div class="product-price">
+        {{product.price | money }}
+    </div>    
+</div>
+
+{% form 'product', product %}
+<div class="product-buying">
+    <button class="buysalot">
+
+<input type="submit" value="Add to cart">
+        
+    </button>
+</div>
+{% endform %}
+{% schema %}
+{
+   "name": "Main Product2",
+  "settings": [
+    
+  ],
+ "presets": [
+    {
+        "category": "Main product",
+        "name":"product"
+    }
+ ]
+}
+{% endschema %}

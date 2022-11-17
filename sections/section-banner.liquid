@@ -1,0 +1,110 @@
+<div class="container123">
+  <div class="banner-container">
+   
+    <!-- {% for block in section.blocks %}
+    <div class="sub-banner2">
+        <div class="banner2-slider desktop_att">
+          <div><img src="{{block.settings.slide_insert | img_url: 'master'}}"></div>
+        </div>
+
+        <div class="banner2-content container">
+          <h2 class="title">{{block.settings.title}}</h2>
+          <div class="bt-click">
+              <a href="{{block.settings.url}}" class="btn1">{{block.settings.btn}}</a>
+          </div>
+        </div>
+  </div>
+    {% endfor %} -->
+
+   
+   
+   
+   
+   
+    {% for block in section.blocks %}
+    <div class="sub-slider">
+      <div class="banner-slider desktop_att">
+            <div class="size_image">
+              <img src="{{block.settings.slide_insert | img_url: 'master'}}">
+            </div>
+      </div>
+
+      <div class="banner-slider mobile_att">
+              {% if block.settings.slide_insert_mobile != nil %}
+                <div><img src="{{block.settings.slide_insert_mobile | img_url: 'master'}}"></div>
+                {% else %}
+                <div>
+                  <img src="{{block.settings.slide_insert | img_url: 'master'}}"></div>
+              {% endif %}     
+      </div>
+    
+      <div class="banner-content container">
+          <h2 class="title">{{block.settings.title}}</h2>
+          <div class="bt-click">
+              <a href="{{block.settings.url}}" class="btn1">{{block.settings.btn}}</a>
+          </div>
+      </div>
+    </div>
+      {% endfor %}
+    </div>
+</div>
+
+{% schema %}
+{
+   "name": "Banner slide",
+  "settings": [
+    {
+       "type": "text",
+       "id": "title",
+       "label": "Title banner",
+      "default": "Free Weekly Wine Tastings"
+    },
+    {
+       "type": "text",
+       "id" : "btn",
+       "label": "title button",
+      "default": "Learn more"
+    },
+    {
+       "type": "url",
+       "id": "url",
+       "label": "url button"
+    }
+  ],
+  "blocks":[
+    {
+     "type": "slide",
+     "name": "Insert slide",
+    "settings": [
+      {
+        "id": "slide_insert",
+       "type": "image_picker",
+       "label": "pictures"
+      },
+      {
+        "id": "slide_insert_mobile",
+       "type": "image_picker",
+       "label": "pictures"
+      },
+      {
+        "type": "text",
+        "id": "title",
+        "label": "Title banner",
+       "default": "Free Weekly Wine Tastings"
+     },
+     {
+        "type": "text",
+        "id" : "btn",
+        "label": "title button",
+       "default": "Learn more"
+     },
+     {
+        "type": "url",
+        "id": "url",
+        "label": "url button"
+     }
+    ]
+    }
+  ]
+}
+{% endschema %}

@@ -1,0 +1,91 @@
+
+    <div class="header-background">
+        <div class="container-header-background">
+            <div class="container">
+                <div class="header-middle d-flex justify-content-between">
+                    <div class="header-middle-left">
+                        <a href="#" class="menu-icon">
+                            <img src="{{'menu-icon@2x.png' | asset_url }}" alt="">
+                        </a>
+                        <a href="{{section.settings.id_url_map}}" class="location-icon">
+                            <img src="{{'location-icon@2x.png' | asset_url }}"></a>
+                        <a href="tel:{{section.settings.id_phone_number}}" class="phone-icon2">
+                            <img src="{{'phone-icon@2x.png' | asset_url }}" alt=""> {{section.settings.id_phone_number}}
+                        </a>
+                    </div>
+                    <div class="header-middle-centre">
+                        <a href="#" class="boccaccio-logo">
+                            {% if section.settings.id_logo_brand != blank %}
+                            <img src="{{ section.settings.id_logo_brand | img_url: 'master'}}" alt="">
+                                {% else %}
+                                    <img src="{{'boccaccio-logo@2x.png' | asset_url }}" alt="">
+                            {% endif %}
+                        </a>
+                    </div>
+                    <div class="header-middle-right">
+                        <a href="tel:{{section.settings.id_phone_number}}" class="phone-icon">
+                            <img src="{{'phone-icon@2x.png' | asset_url }}" alt="">
+                        </a>
+                        <div class="header-middle-search-icon">
+                            <button type="button" onclick="myFunc1()">
+                                <img src="{{'search-icon.svg' | asset_url }}" alt="">
+                            </button>
+                            <input type="text" class="text-search hidden" value="pinot"> 
+                            
+                        </div>
+                        <a href="/cart/" class="basket-icon">
+                            <img src="{{'basket-icon@2x.png' | asset_url }}" alt="">
+                        </a>
+                    </div>
+                </div>
+                <div class="header-bot">
+                    <div class="header-bot-search-icon">
+                        <img src="{{'search-icon.svg' | asset_url }}" alt="" class="search-icon">
+                    </div>
+                    <input class="header-bot-search-content" value="Search our range...">
+                </div>
+            </div>
+            <div class="container">
+                <div class="header-bot-navibar">
+                    <div class="navibar-container">
+                        {% for link in section.settings.menu.links %}
+                        <div class="navibar-block"><a href="{{link.url}}">{{link.title}}</a></div>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="line-gray">
+        </div>
+    </div>
+
+
+{% schema %}
+{
+   "name": "header content",
+  "settings": [
+    {
+       "type": "text",
+       "id": "id_phone_number",
+       "default": "1300 262 222",
+       "label": "Phone number"
+    },
+    {
+       "type": "url",
+       "id": "id_url_map",
+       "label": "Map URL"
+    },
+    {
+       "type": "image_picker",
+       "id": "id_logo_brand",
+       "label": "Logo brand"
+    },
+    {
+        "type": "link_list",
+        "id": "menu",
+        "default": "main-menu",
+        "label": "Select Menu"
+    }
+  ]
+}
+{% endschema %}

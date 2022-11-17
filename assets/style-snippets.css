@@ -1,0 +1,29 @@
+/* snippets-products-sales */
+
+.product-box{
+    text-decoration: none;
+}
+
+.product-tags{
+    height: 20px;
+    padding: 0;
+}
+.product-tags-status{
+    margin: 10px auto;
+    color: #FFFFFF;
+  font-size: 12px;
+  letter-spacing: 0;
+  text-align: center;
+  text-transform: uppercase;
+  height: 20px;
+  width: 53px;
+  border-radius: 10px;
+  background-color: #F81C2A;
+}
+
+.product-collection-price{
+    display: flex;
+    justify-content: center;
+    margin: 6px 0;
+}
+

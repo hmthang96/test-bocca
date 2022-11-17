@@ -1,0 +1,56 @@
+{% render 'snippets-plusaminus', 
+blocks : blocks,
+product : product,
+product_description : product.description, 
+color_text : section.settings.color_text,
+color_bg : section.settings.color_background
+%}
+
+
+{% schema %}
+{
+   "name": "add content menu",
+  "settings": [
+       {
+       "type": "color",
+       "id": "color_text",
+       "label" : "Color text"
+       },
+      {
+        "type": "color",
+        "id": "color_background",
+        "label": "Background color black"
+      }
+  ],
+"max_blocks": 3,
+"blocks":
+  [
+    {
+       "name": "content product",
+      "type": "text",
+      "settings": [
+      {
+        "type": "text",
+        "id": "title-content",
+        "label" : "Title",
+        "default" : "about"
+        },
+        {
+           "type": "text",
+           "id" : "text-content",
+           "label" : "content",
+           "default": "about content"
+        }
+      ]
+    }
+    
+  ],
+"presets": [
+    {
+        "category": "Menu content",
+        "name":"Menu content"
+    }
+    ]
+}
+
+{% endschema %}

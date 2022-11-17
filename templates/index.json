@@ -1,0 +1,190 @@
+{
+  "sections": {
+    "banner_slider": {
+      "type": "section-banner",
+      "blocks": {
+        "092a6a00-2274-408a-b218-710e2eb4cb36": {
+          "type": "slide",
+          "settings": {
+            "slide_insert": "shopify:\/\/shop_images\/person-fishing-on-the-beach-is-silhouetted-at-sunset.jpg",
+            "slide_insert_mobile": "shopify:\/\/shop_images\/coffee-and-cake.jpg",
+            "title": "Free Weekly Wine Tastings",
+            "btn": "Learn more",
+            "url": ""
+          }
+        },
+        "6fb0f6ce-1772-4436-94d6-8fae316497e2": {
+          "type": "slide",
+          "settings": {
+            "slide_insert": "shopify:\/\/shop_images\/person-stands-on-rocks-poking-out-of-the-ocean-shoreline.jpg",
+            "slide_insert_mobile": "shopify:\/\/shop_images\/sliced-pumpkin-pie.jpg",
+            "title": "Free Weekly Wine Tastings",
+            "btn": "Learn more",
+            "url": ""
+          }
+        },
+        "eec5b829-e886-4fe3-9b9f-146541174015": {
+          "type": "slide",
+          "settings": {
+            "slide_insert": "shopify:\/\/shop_images\/Home-Banner-image.jpg",
+            "title": "Free Weekly Wine Tastings",
+            "btn": "Learn more",
+            "url": ""
+          }
+        }
+      },
+      "block_order": [
+        "092a6a00-2274-408a-b218-710e2eb4cb36",
+        "6fb0f6ce-1772-4436-94d6-8fae316497e2",
+        "eec5b829-e886-4fe3-9b9f-146541174015"
+      ],
+      "settings": {
+        "title": "Free Weekly Wine Tastings",
+        "btn": "Learn more",
+        "url": "shopify:\/\/blogs\/news"
+      }
+    },
+    "function_ship": {
+      "type": "section-freeship",
+      "blocks": {
+        "d27add4b-a230-48c8-b9c1-76fa9870ec7e": {
+          "type": "text",
+          "settings": {
+            "image_id": "shopify:\/\/shop_images\/wine-icon-2_2x_0af7f92b-1520-451c-aaa3-23c26dba7787.png",
+            "title_id": "Family Owned and Run"
+          }
+        },
+        "94b5cc8f-01b8-44d0-bdfc-eabe08d45f4d": {
+          "type": "text",
+          "settings": {
+            "image_id": "shopify:\/\/shop_images\/wine-icon-2_2x_0af7f92b-1520-451c-aaa3-23c26dba7787.png",
+            "title_id": "Fast Shipping in Australia"
+          }
+        },
+        "58d518d8-2d06-4469-87ca-ae922350dc79": {
+          "type": "text",
+          "settings": {
+            "image_id": "shopify:\/\/shop_images\/wine-icon-2_2x_0af7f92b-1520-451c-aaa3-23c26dba7787.png",
+            "title_id": "50 + Years in Operation"
+          }
+        }
+      },
+      "block_order": [
+        "d27add4b-a230-48c8-b9c1-76fa9870ec7e",
+        "94b5cc8f-01b8-44d0-bdfc-eabe08d45f4d",
+        "58d518d8-2d06-4469-87ca-ae922350dc79"
+      ],
+      "settings": {
+      }
+    },
+    "what_new": {
+      "type": "section-what-new",
+      "settings": {
+        "product_title": "What's new",
+        "collection": "best-seller"
+      }
+    },
+    "16641606088b576e48": {
+      "type": "section-promos",
+      "blocks": {
+        "cc32377f-a7ab-414f-ac38-a16cc60f3483": {
+          "type": "blog",
+          "settings": {
+            "heading_text": "",
+            "url_post": ""
+          }
+        },
+        "06b8cb63-6f1c-42ad-8aa0-d0bbd5a35863": {
+          "type": "blog",
+          "settings": {
+            "heading_text": "",
+            "url_post": ""
+          }
+        },
+        "e7be5175-c506-401d-9411-a9215a0f3f55": {
+          "type": "blog",
+          "settings": {
+            "heading_text": "",
+            "url_post": ""
+          }
+        },
+        "bb3f5475-39a3-448d-8174-d15176e448a4": {
+          "type": "blog",
+          "settings": {
+            "heading_text": "",
+            "url_post": ""
+          }
+        }
+      },
+      "block_order": [
+        "cc32377f-a7ab-414f-ac38-a16cc60f3483",
+        "06b8cb63-6f1c-42ad-8aa0-d0bbd5a35863",
+        "e7be5175-c506-401d-9411-a9215a0f3f55",
+        "bb3f5475-39a3-448d-8174-d15176e448a4"
+      ],
+      "settings": {
+      }
+    },
+    "best_seller": {
+      "type": "section-what-new",
+      "settings": {
+        "product_title": "Best seller",
+        "collection": "frontpage"
+      }
+    },
+    "location": {
+      "type": "section-location",
+      "settings": {
+        "header": "Get in touch",
+        "phone_number": "1300 262 222",
+        "mail": "sales@boccaccio.com.au",
+        "address": "1030-1050 Burke Rd, Balwyn VIC 3103 Australiakkk",
+        "iframe_map": "<iframe src=\"https:\/\/www.google.com\/maps\/embed?pb=!1m18!1m12!1m3!1d14894.7305105591!2d105.81728845!3d21.045381199999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135ab111d6509a3%3A0xa889b563318408b2!2zQuG7h25oIHZp4buHbiBQaOG7lWkgVHJ1bmcgxrDGoW5n!5e0!3m2!1svi!2sus!4v1664165520694!5m2!1svi!2sus\" width=\"600\" height=\"450\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\"><\/iframe>",
+        "url_id": ""
+      }
+    },
+    "1664158801849bd542": {
+      "type": "template-footer",
+      "blocks": {
+        "47747ec6-a27e-4274-aa02-9041b5530ae5": {
+          "type": "menu",
+          "settings": {
+            "menu_block": "about-us"
+          }
+        },
+        "b3b7387f-8ec9-49bd-af5f-9602c8d0b60f": {
+          "type": "menu",
+          "settings": {
+            "menu_block": "shop"
+          }
+        },
+        "ac5558bf-82c5-4148-933c-c9126568d863": {
+          "type": "menu",
+          "settings": {
+            "menu_block": "shop"
+          }
+        }
+      },
+      "block_order": [
+        "47747ec6-a27e-4274-aa02-9041b5530ae5",
+        "b3b7387f-8ec9-49bd-af5f-9602c8d0b60f",
+        "ac5558bf-82c5-4148-933c-c9126568d863"
+      ],
+      "settings": {
+        "footer_title": "Sign up for 10% off",
+        "footer_list": "Sign up for our newsletter to get the latest news, announcements and event information.",
+        "footer_content": "<p>Boccaccio Cellars supports responsible consumption of alcohol.<br\/> Under the Liquor Control Reform Act 1998 it is an offence to supply alcohol to a person under the age of 18 years (Penalty exceeds $6,000) and for a person under the age of 18 years to purchase or receive liquor (Penalty exceeds $500).<\/p>",
+        "copy_right": "© 2021 Boccaccio Cellars"
+      }
+    }
+  },
+  "order": [
+    "banner_slider",
+    "function_ship",
+    "what_new",
+    "16641606088b576e48",
+    "best_seller",
+    "location",
+    "1664158801849bd542"
+  ]
+}

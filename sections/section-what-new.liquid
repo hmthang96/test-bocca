@@ -1,0 +1,39 @@
+<div class="container what-new-container">
+    <div class="product-title">
+        <p>{{section.settings.product_title}}</p>
+    </div>
+    <div class="product-slide">
+        {% for product in section.settings.collection.products %}
+        <div class="product-slide-card" style="margin: 0 1vw ;">
+            {% render 'snippets-card-product',card_product: product%}
+        </div>
+       
+        {% endfor %}
+    </div>
+    
+</div>
+
+{% schema %}
+{
+   "name": "What's new",
+   "settings": [
+    {
+       "type": "text",
+       "id": "product_title",
+       "label" : "Product title",
+       "default": "What's new"
+    },
+    {
+        "type": "collection",
+        "id": "collection",
+        "label": "Collection"
+      }      
+  ],
+ "presets": [
+    {
+        "category": "Slider",
+        "name":"Slider"
+    }
+ ]
+}
+{% endschema %}

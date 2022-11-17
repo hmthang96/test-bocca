@@ -1,0 +1,29 @@
+<div class="card-wrapper product-card-wrapper underline-links-hover">
+    <a href="{{product.url}}" class="product-single">
+        <div class="product-collection">
+                <div class="product-collection-image">
+                    <img src="{{product.featured_image | img_url: 'master'}}" alt="">
+                </div>
+                <div class="product-collection-sales">
+                    <ul class="product-tags">
+                            {% if product.tags contains "Sales" %}
+                                <p class="product-tags-status">Sales</p>
+                            {% endif %}
+                    </ul>
+                </div>
+                <div class="product-collection-discription">
+                    <p>{{product.description}}</p>
+                </div>
+                <div class="product-collection-price">
+                            {% if product.tags contains "Sales" %}
+                                    <p class="product-collection-ogrinalprice px-1">{{product.compare_at_price_max | money}}</p>
+                                    <p class="prodcut-collection-pricesales px-1">{{product.price | money}}</p>
+                                    <p class="product-collection-quantity px-1">per bottle</p>
+                                    {% else %}
+                                    <p class="prodcut-collection-pricesales2 px-1">{{product.price | money}}</p>
+                                    <p class="product-collection-quantity px-1">per bottle</p>
+                            {% endif %}
+                </div>
+            </div>
+        </a>    
+</div>

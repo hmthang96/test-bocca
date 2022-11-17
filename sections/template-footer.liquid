@@ -1,0 +1,99 @@
+<div class="footer container-fluid">
+    <div class="footer-top container">
+        
+        <div class="footer-newsletter">
+            <div class="footer-news-content">
+                <h1 class="footer-title">{{section.settings.footer_title}}</h1>
+                <p class="footer-list">{{section.settings.footer_list}}</p>
+            </div>
+            <div class="footer-mail">
+                {% form 'customer', class: 'w-100' %}
+                <div class="email">
+                    <input class="field-email"type="email" name="contact[email]" value="Your email" />
+                    <button type="submit"><i class="fas fa-arrow-right"></i></button>
+                  </div>
+                {% endform %}
+            </div>
+        </div>
+
+
+        <div class="footer-cols">
+
+            {% for block in section.blocks %}
+            <div class="cols-content-2">
+                    <div class="cols-content cols-3">
+                        {{block.settings.menu_block.title}}
+                        <i class="asign fas fa-plus" ></i>
+                    </div>
+                            <ul class="menu-dropdown active">
+                                {% for link in block.settings.menu_block.links %}
+                                    <li class="menu-link">
+                                        <a href="{{link.url}}">{{link.title}}</a>
+                                    </li>
+                                {% endfor %}
+                            </ul>
+            </div>
+            {% endfor %}
+        </div>
+        <div class="footer-content">
+            {{section.settings.footer_content}}
+        </div>
+    </div>
+    <div class="footer-copyright container">
+        <p>{{section.settings.copy_right}}</p>
+        <i class="fad fa-arrow-right"></i>
+    </div>
+</div>
+
+{% schema %}
+{
+"name": "setting footer",
+"settings": [
+     {
+        "type": "text",
+        "id": "footer_title",
+        "default": "Sign up for 10% off",
+        "label": "footer title"
+        },
+        {
+        "type": "text",
+        "id": "footer_list",
+        "label": "Footer list",
+        "default": "Sign up for our newsletter to get the latest news, announcements and event information."
+        },
+        {
+        "type": "richtext",
+        "id": "footer_content",
+        "label": "Footer content",
+        "default": "<p>Boccaccio Cellars supports responsible consumption of alcohol.</br> Under the Liquor Control Reform Act 1998 it is an offence to supply alcohol to a person under the age of 18 years (Penalty exceeds $6,000) and for a person under the age of 18 years to purchase or receive liquor (Penalty exceeds $500).</p>"
+        },
+        {
+       "type": "text",
+       "id": "copy_right",
+       "label" : "Copy right",
+      "default": "© 2021 Boccaccio Cellars"
+        }
+  ],
+"max_blocks": 3,
+"blocks":
+  [
+    {
+       "name": "Menu block",
+      "type": "menu",
+     "settings": [
+        {
+          "type": "link_list",
+          "id" : "menu_block",
+          "label" : "Menu select"
+        }
+     ]
+    }
+  ],
+"presets": [
+    {
+        "category": "footerr",
+        "name":"footerr"
+    }
+ ]
+}
+{% endschema %}

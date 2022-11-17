@@ -1,0 +1,67 @@
+{
+  "sections": {
+    "banner": {
+      "type": "main-collection-banner",
+      "settings": {
+        "show_collection_description": true,
+        "show_collection_image": false,
+        "color_scheme": "background-1"
+      }
+    },
+    "product-grid": {
+      "type": "main-collection-product-grid",
+      "settings": {
+        "products_per_page": 8,
+        "columns_desktop": 4,
+        "image_ratio": "square",
+        "show_secondary_image": true,
+        "enable_quick_add": false,
+        "enable_filtering": true,
+        "filter_type": "vertical",
+        "enable_sorting": true,
+        "columns_mobile": "2",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "16643368479c767e61": {
+      "type": "template-footer",
+      "blocks": {
+        "38058518-28a7-494a-bdf1-7482cb310269": {
+          "type": "menu",
+          "settings": {
+            "menu_block": "about-us"
+          }
+        },
+        "4a0c9879-7567-498f-a7b6-82faffd77275": {
+          "type": "menu",
+          "settings": {
+            "menu_block": "shop"
+          }
+        },
+        "f8d4f642-5cd8-483a-867d-477ee31caaaa": {
+          "type": "menu",
+          "settings": {
+            "menu_block": "main-menu"
+          }
+        }
+      },
+      "block_order": [
+        "38058518-28a7-494a-bdf1-7482cb310269",
+        "4a0c9879-7567-498f-a7b6-82faffd77275",
+        "f8d4f642-5cd8-483a-867d-477ee31caaaa"
+      ],
+      "settings": {
+        "footer_title": "Sign up for 10% off",
+        "footer_list": "Sign up for our newsletter to get the latest news, announcements and event information.",
+        "footer_content": "<p>Boccaccio Cellars supports responsible consumption of alcohol.<br\/> Under the Liquor Control Reform Act 1998 it is an offence to supply alcohol to a person under the age of 18 years (Penalty exceeds $6,000) and for a person under the age of 18 years to purchase or receive liquor (Penalty exceeds $500).<\/p>",
+        "copy_right": "© 2021 Boccaccio Cellars"
+      }
+    }
+  },
+  "order": [
+    "banner",
+    "product-grid",
+    "16643368479c767e61"
+  ]
+}

@@ -1,0 +1,70 @@
+{% assign blog = blogs[section.settings.blogs] %}
+
+<div class="container promos-container">
+    
+    {% for block in section.blocks %}
+        <div class="promos-container-blogs">
+            <a href="{{block.settings.url_post}}">
+                <div class="promos-image">
+                    <img src="{{block.settings.img_picker | img_url: 'master'}}" alt="">
+                </div>
+                <div class="promos-title">
+                    <p>{{block.settings.heading_text}}</p>
+                </div> 
+            </a>
+        </div>
+    {% endfor %}
+
+    <!-- {% for article in blog.articles %}
+    <div class="promos-container-blogs">
+        <a href="{{article.url}}">
+            <div class="promos-image">
+                <img src="{{article.image | img_url: 'master'}}" alt="">
+            </div>
+            <div class="promos-title">
+                <p>{{article.title}}</p>
+            </div> 
+        </a>
+    </div>
+{% endfor %} -->
+
+</div>
+
+{% schema %}
+{
+"name": "blogs post",
+"settings": 
+  [ ],
+"max_blocks": 4,
+ "blocks": [
+    {
+       "name": "Create new post",
+      "type": "blog",
+     "settings": [
+        {
+            "type": "text",
+            "id": "heading_text",
+            "label": "Name blogs"
+        },
+        {
+            "type": "image_picker",
+            "id": "img_picker",
+            "label": "Image post"
+        },
+        {
+            "type": "url",
+            "id": "url_post",
+            "label": "URL post"
+        }
+     ]
+    }
+ ],
+"presets": 
+[
+    {   
+        "name": "Select blogs",
+        "category": "Blog"
+    }
+]
+}
+{% endschema %}

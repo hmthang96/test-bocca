@@ -1,0 +1,81 @@
+<div class="container">
+    <div class="freeship-container">
+        <div class="freeship-container-function">
+            {% for block in section.blocks %}
+                 <div class="function-ship py-{{section.settings.padding_bottom}}">
+                    <div class="function-ship-icon">
+                        <img src="{{block.settings.image_id | img_url: 'master'}}" alt="">
+                    </div>
+                    <p class="fuction-ship-title">
+                        {{block.settings.title_id}}
+                    </p>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+
+<div class="grayline">
+</div>
+
+{% schema %}
+{
+   "name": "Function Ship v2",
+  "settings": [
+    {
+        "type": "range",
+        "id": "row",
+        "label": "Number row(s)",
+        "unit": " r",
+        "min": 1,
+        "max": 5,
+        "step": 1,
+        "default": 1
+      },
+     {
+        "type": "range",
+        "id": "cols",
+        "label": "Number col(s)",
+        "unit": " c",
+        "min": 1,
+        "max": 5,
+        "step": 1,
+        "default": 4
+     },
+    {
+        "type": "range",
+        "id": "padding_bottom",
+        "label": "Padding Y",
+        "unit": "px",
+        "min": 0,
+        "max": 30,
+        "step": 2,
+        "default": 0
+    }
+  ],
+   "blocks":[
+    {
+       "type": "text",
+       "name": "Ship",
+      "settings": [
+        {
+           "type": "image_picker",
+           "id": "image_id",
+           "label": "Picture Insert"
+        },
+        {
+           "type": "text",
+           "id": "title_id",
+            "label": "Title"
+        }
+      ]
+    }
+   ],
+  "presets": [
+    {
+        "category": "icon text",
+        "name":"freeship_v2"
+    }
+  ]
+}
+{% endschema %}

@@ -1,0 +1,179 @@
+
+@media screen and (min-width: 992px) {
+    .header-bot,
+    .header-middle .menu-icon, 
+    .header-middle .phone-icon{
+        display: none;
+    }
+    .header-bot-navibar{
+        display: flex;
+    }
+
+    .phone-icon2{
+        display: inline !important;
+    }
+
+    .slick-dots{
+        top: 93%;
+    }
+
+    /* .header{
+        height: 183px;
+    } */
+
+    .header-background{
+        height: 147px;
+    }
+
+    .header-middle{
+        padding: 9px 0 9px 0;
+    }
+
+    .header-middle-centre{
+        height: 70px;
+        /* width: 155px; */
+        /* transform:translateX(-33%); */
+    }
+    .header-middle .boccaccio-logo img {
+        width: 155px;
+        height: 58px;
+    }
+
+    .header-middle-search-icon{
+        display: flex;
+        align-items: center;
+    }
+
+    .line-gray{
+        display:block;
+    }
+    .grayline{
+        margin: 50px auto
+    }
+
+
+    /* footer responsive */
+    .footer-newsletter{
+        float: left;
+        width: 33%;
+    }
+    .footer-cols{
+        width: 50%;
+        float: right;
+        display: flex;
+        justify-content: space-around;
+        padding-top : 30px
+    }
+    .footer-content{
+        width: 33%;
+        clear: both;
+        padding:0 0 54px 0;
+
+    }
+    .footer-cols .cols-content-2{
+        border-top: 0;
+    }
+
+    .footer-cols .cols-content-2:last-child{
+        border-bottom: 0;
+    }
+    .footer-copyright{
+        display: flex;
+        align-items: center;
+        height: 66px;
+        border-top: 1px #323232 solid;
+    }
+
+    .footer-cols .menu-dropdown{
+        max-height: 100%;
+    }
+
+    .footer-newsletter .footer-title {
+        text-align: start;
+    }
+
+    .footer-newsletter .footer-list{
+        text-align: start;
+    }
+
+    .footer-cols .asign{
+        display: none;
+    }
+
+    .banner-container .banner-content{
+        /* position: absolute; */
+        transform: translateY(-360%);
+        background-color: rgba(0,0,0,0);
+        /* color: white; */
+        left: 11.25%;
+        height: auto;
+    }
+
+    .banner-container .banner-content .title{
+        color: white;
+        text-align: left;
+    }
+    .banner-container .banner-content .btn1{
+        background-color: rgba(0,0,0,0);
+        color: white;
+    }
+    .banner-container .banner-content .bt-click{
+        justify-content: start;
+    }
+
+    .banner-container .sub-slider{
+        height: 620px;
+    }
+
+    .banner-container .sub-slider img{
+    }
+
+    .promos-container-blogs{
+        width: 23%;
+    }
+
+}
+
+@media screen and (min-width: 768px) {
+    .location-header,
+    .location .location-header,
+    .location .location-contact-details{
+        text-align:start
+    }
+    .location .btn-centre{
+        justify-content:left
+    }
+
+    .location .locaiton-map{
+        width: 50%;
+        height: 467px;
+    }
+
+    .mobile_att{
+        display: none !important;
+    }
+
+    .grayline{
+        margin: 50px auto;
+    }
+
+
+}
+
+
+@media screen and (max-width: 767px) {
+    .location .location-contact{
+        width: 100%;
+    }
+
+    .desktop_att{
+        display: none !important;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .promos-container{
+        margin: 30px 0;
+    }
+}
+

@@ -1,0 +1,45 @@
+<div class="container-fluid">
+ <div class="footer-cols">
+        <div class="cols-content-2">
+            <div class="cols-content cols-3">
+                About <i class="asign fas fa-plus" ></i>
+            </div>
+            <div class="menu-dropdown active">
+                <div class="menu-link">
+                    <span>{{product.description}}</span>
+                    <span>{{product.id}}</span>
+                </div>
+            </div>
+        </div>
+
+        {% for block in section.blocks %}
+        <div class="cols-content-2">
+                <div class="cols-content cols-3">
+                    {{block.settings.title-content}}
+                    <i class="asign fas fa-plus" ></i>
+                </div>
+                <div class="menu-dropdown active">
+                        <li class="menu-link">
+                            {{block.settings.text-content}}
+                        </li>
+                </div>
+        </div>
+        {% endfor %}
+
+    </div>
+</div>
+
+<style>
+
+
+    .cols-content.cols-3{
+        color: {{color_text}}
+    }
+
+    .menu-link{
+        color: {{color_text}};
+    }
+    .footer-cols{
+        background-color: {{color_bg}};
+    }
+</style>

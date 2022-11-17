@@ -1,0 +1,64 @@
+<div class="grayline">
+    
+</div>
+<div class="container location">
+    <div class="location-contact">
+        <div class="location-info">
+            <p class="location-header">{{section.settings.header}}</p>
+            <div class="location-contact-details">
+                <p class="location-phone">{{section.settings.phone_number}}</p>
+                <a href="tel:{{section.settings.mail}}" class="mail">{{section.settings.mail}}</a>
+                <p class="location-address">{{section.settings.address}}</p>
+            </div>
+            <div class="btn-centre">
+                <button href="{{section.settings.url_id}}" class="location-btn">Contact Us</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="locaiton-map">
+        {{section.settings.iframe_map}}
+    </div>
+</div>
+
+{% schema %}
+{
+   "name": "Address",
+  "settings": [
+    {
+       "type": "text",
+       "id": "header",
+      "default": "Get in touch",
+       "label": "Title heading"
+    },
+    {
+        "type": "text",
+        "id": "phone_number",
+       "default": "1300 262 222",
+        "label": "No phone"
+     },
+     {
+       "type": "text",
+        "id": "mail",
+        "label": "Mail",
+       "default": "sales@boccaccio.com.au"
+     },
+     {
+        "type": "html",
+        "id": "address",
+        "label": "Address",
+       "default": "1030-1050 Burke Rd, Balwyn VIC 3103 Australia"
+     },
+     {
+    "type": "html",
+      "id": "iframe_map",
+      "label": "iframe google map"
+     },
+     {
+       "type": "url",
+       "id" : "url_id",
+       "label": "Contact URL"
+     }
+  ]
+}
+{% endschema %}

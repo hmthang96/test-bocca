@@ -1,0 +1,10 @@
+
+<div class="slide-product_X w-100 h-50">
+    <img class="w-100 h-100" src="{{product.featured_image | img_url: 'master'}}" alt="">
+
+    {% for variant in product.variants %}
+    {% if variant.featured_image != blank %}
+    <img src="{{variant.featured_image | img_url: 'medium'}}" alt="">       
+    {% endif %}
+    {% endfor %}
+</div>
